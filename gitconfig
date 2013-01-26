@@ -1,0 +1,14 @@
+[user]
+	name = Guangming Cui
+	email = cui@bigfoot.com
+[merge]
+	tool = vimdiff
+[color]
+	ui = auto
+[core]
+	pager = less -R
+	excludesfile = /Users/gcui/.gitignore_global
+[push]
+	default = simple
+[pretty]
+	fav = %C(yellow)%h%Creset %C(blue)[%ci]%Creset %s %C(green)(%an)%Creset
