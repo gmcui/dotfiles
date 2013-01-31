@@ -54,8 +54,8 @@ endif
 
 set dir=~/tmp
 
-set undofile
-set undodir=~/tmp
+" set undofile
+" set undodir=~/tmp
 
 " custom tab setting for file types
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
