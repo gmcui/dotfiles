@@ -1,5 +1,13 @@
 # .bashrc
 
+# source this file in your ~/.bashrc like this:
+#
+# # Source custom bashrc
+# if [ -f $HOME/dotfiles/bashrc ]; then
+#     source $HOME/dotfiles/bashrc
+# fi
+
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc

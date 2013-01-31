@@ -1,14 +1,20 @@
+# Create .gitconfit like this
+# Only works in git 1.7.10.2 or later
+#
+# [include]
+#     path = dotfiles/gitconfig
+
 [user]
-	name = Guangming Cui
-	email = cui@bigfoot.com
+    name = Guangming Cui
+    email = cui@bigfoot.com
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [color]
-	ui = auto
+    ui = auto
 [core]
-	pager = less -R
-	excludesfile = /Users/gcui/.gitignore_global
+    pager = less -R
+    excludesfile = /Users/gcui/.gitignore_global
 [push]
-	default = simple
+    default = simple
 [pretty]
-	fav = %C(yellow)%h%Creset %C(blue)[%ci]%Creset %s %C(green)(%an)%Creset
+    fav = %C(yellow)%h%Creset %C(blue)[%ci]%Creset %s %C(green)(%an)%Creset

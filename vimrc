@@ -1,4 +1,11 @@
-set guifont=Menlo\ 11
+" Create ~/.vimrc like the following:
+"
+" if filereadable(glob("~/dotfiles/vimrc"))
+"   source ~/dotfiles/vimrc
+" endif
+
+" if you are using gvim or macvim
+" set guifont=Menlo\ 11
 
 " set autoindent
 " set smartindent
@@ -40,6 +47,11 @@ hi Search ctermbg=LightBlue
 
 set listchars=tab:>-,trail:-,eol:$
 
+" set tmp dir for .swp files
+if !isdirectory("~/tmp")
+	silent !mkdir ~/tmp > /dev/null 2>&1
+endif
+
 set dir=~/tmp
 
 set undofile
@@ -75,5 +87,5 @@ autocmd FileType perl       command! -range=% -nargs=0 Tidy <line1>,<line2>!perl
 autocmd FileType html       command! Tidy %!tidy -i 2>/dev/null
 autocmd FileType xml        command! Tidy silent %!xmllint --format --recover - 2>/dev/null
 
-autocmd FileType perl		command! Pod read ~/.vim/pod.template
-autocmd FileType perl 		command! Run !./%
+autocmd FileType perl       command! Pod read ~/.vim/pod.template
+autocmd FileType perl       command! Run !./%

@@ -1,5 +1,16 @@
 # .bash_profile
 
+# Create ~/.bash_profile like this:
+#
+# # .bash_profile
+#
+# # Get the aliases and functions
+# if [ -f ~/dotfiles/bash_profile ]; then
+#     . ~/dotfiles/bash_profile
+# fi
+# 
+# # User specific environment and startup programs
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
