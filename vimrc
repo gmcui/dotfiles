@@ -32,10 +32,13 @@ set statusline=%t%m\ %y\ %=[%c,%l]\ [%{&fo}]
 " colorscheme molokai
 " set background=dark
 " colorscheme solarized
+"
+execute pathogen#infect()
 
-filetype plugin indent on
 syntax on
 syntax sync minlines=1000
+
+filetype plugin indent on
 
 set hlsearch
 set incsearch
@@ -61,11 +64,11 @@ set dir=~/tmp
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=json
 
-autocmd FileType html,perl,php,smarty,javascript,java,sql,mysql
+autocmd FileType html,perl,php,python,smarty,javascript,java,sql,mysql
     \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd FileType ruby,eruby,cucumber,yaml,haml,xml
+autocmd FileType ruby,eruby,cucumber,yaml,haml,xml,coffee
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType perl,php,javascript,java,ruby,eruby,cucumber,yaml,haml,xml,sql,mysql
+autocmd FileType perl,php,python,javascript,java,ruby,eruby,cucumber,yaml,haml,xml,sql,mysql,coffee
     \ setlocal expandtab
 
 " set textwidth but do not auto wrap
@@ -78,6 +81,7 @@ autocmd FileType perl
 autocmd FileType javascript setlocal makeprg=jslint\ %
 autocmd FileType perl       setlocal makeprg=/usr/local/bin/perl\ -cw\ %
 autocmd FileType php        setlocal makeprg=php\ -l\ %
+autocmd FileType python     setlocal makeprg=pylint\ -E\ %
 autocmd FileType ruby       setlocal makeprg=ruby\ -c\ %
 
 autocmd FileType json       command! -range=% -nargs=* Tidy <line1>,<line2>!json_xs -f json -t json-pretty
