@@ -66,9 +66,9 @@ autocmd BufNewFile,BufRead *.json set filetype=json
 
 autocmd FileType html,perl,php,python,smarty,javascript,java,sql,mysql
     \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd FileType ruby,eruby,cucumber,yaml,haml,xml,coffee
+autocmd FileType ruby,eruby,cucumber,yaml,haml,xml,coffee,scss
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType perl,php,python,javascript,java,ruby,eruby,cucumber,yaml,haml,xml,sql,mysql,coffee
+autocmd FileType perl,php,python,javascript,java,ruby,eruby,cucumber,yaml,haml,xml,sql,mysql,coffee,scss
     \ setlocal expandtab
 
 " set textwidth but do not auto wrap
