@@ -1,9 +1,3 @@
-" Create ~/.vimrc like the following:
-"
-" if filereadable(glob("~/dotfiles/vimrc"))
-"   source ~/dotfiles/vimrc
-" endif
-
 " if you are using gvim or macvim
 " set guifont=Menlo\ 11
 
