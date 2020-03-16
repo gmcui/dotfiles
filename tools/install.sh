@@ -141,16 +141,26 @@ install_dotfile() {
 				"${GREEN}Backing up to ${OLD_OLD_DOT_FILE}${RESET}"
 		fi
 		echo "${YELLOW}Found ~/.${DOTFILE}.${RESET} ${GREEN}Backing up to ${OLD_DOT_FILE}${RESET}"
-		mv ~/.$DOTFILE "${OLD_DOT_FILE}"
+
+		if [ $# -gt 2 ] && [ $3 = append ]; then
+			# copy exisitng dotfile to backup
+			cp ~/.$DOTFILE "${OLD_DOT_FILE}"
+		else
+			# move away exisitng dotfile
+			mv ~/.$DOTFILE "${OLD_DOT_FILE}"
+		fi
 	fi
 
 	echo "${GREEN}Using the dotfile template file and installing it to ~/.${DOTFILE}.${RESET}"
 	sed -e "s#DOTFILE_DIR#${DOTS}#g" "$DOTS/templates/$DOTFILE.template" > ~/.$DOTFILE-temp
 	if [ $# -gt 2 ] && [ $3 = append ]; then
 		# append to existing dotfile
+		echo "Appending to existing .${DOTFILE}"
 		cat ~/.$DOTFILE-temp >> ~/.$DOTFILE
+		rm ~/.$DOTFILE-temp
 	else
 		# write new dotfile
+		echo "Writing new .${DOTFILE}"
 		mv -f ~/.$DOTFILE-temp ~/.$DOTFILE
 	fi
 
@@ -215,6 +225,7 @@ main() {
 	setup_vimrc
 	setup_screenrc
  
+	echo
 }
 
 main "$@"
