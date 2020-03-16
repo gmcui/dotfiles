@@ -33,7 +33,7 @@ set statusline=%t%m\ %y\ %=[%c,%l]\ [%{&fo}]
 " set background=dark
 " colorscheme solarized
 "
-execute pathogen#infect()
+" execute pathogen#infect()
 
 syntax on
 syntax sync minlines=1000
