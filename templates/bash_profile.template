@@ -1,0 +1,8 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f DOTFILE_DIR/bash_profile ]; then
+    . DOTFILE_DIR/bash_profile
+fi
+
+# User specific environment and startup programs

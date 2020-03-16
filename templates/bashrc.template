@@ -1,0 +1,5 @@
+
+# Source custom Oh My Bash bashrc
+if [ -f DOTFILE_DIR/bashrc ]; then
+    source DOTFILE_DIR/bashrc
+fi

@@ -1,0 +1,3 @@
+if filereadable(glob("DOTFILE_DIR/vimrc"))
+  source DOTFILE_DIR/vimrc
+endif
