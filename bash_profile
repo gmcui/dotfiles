@@ -18,5 +18,6 @@ umask 002
 # '--clear' enhances security by requiring private key password on each new shell
 # However it causes big problem with MacVim by stopping it from opening any windows
 # keychain --clear --quiet id_dsa
-keychain --quiet id_dsa
+[ -f ~/.ssh/id_dsa ] && keychain --quiet id_dsa
+[ -f ~/.ssh/id_rsa ] && keychain --quiet id_rsa
 . ~/.keychain/$HOSTNAME-sh
