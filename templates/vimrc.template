@@ -1,3 +1,7 @@
+if filereadable(glob("DOTFILE_DIR/vimrc_vundle"))
+  source DOTFILE_DIR/vimrc
+endif
+
 if filereadable(glob("DOTFILE_DIR/vimrc"))
   source DOTFILE_DIR/vimrc
 endif
