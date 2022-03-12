@@ -1,8 +1,8 @@
 " if you are using gvim or macvim
 " set guifont=Menlo\ 11
 
-" set autoindent
-" set smartindent
+set autoindent
+set smartindent
 set backspace=indent,eol,start
 
 set ruler 
@@ -23,11 +23,7 @@ set smartcase
 set laststatus=2
 set statusline=%t%m\ %y\ %=[%c,%l]\ [%{&fo}]
 
-" colorscheme molokai
-" set background=dark
-" colorscheme solarized
-"
-" execute pathogen#infect()
+colorscheme desert
 
 syntax on
 syntax sync minlines=1000
@@ -37,7 +33,8 @@ filetype plugin indent on
 set hlsearch
 set incsearch
 
-highlight MatchParen ctermbg=blue guibg=lightblue
+" highlight MatchParen ctermbg=blue guibg=lightblue
+highlight MatchParen cterm=NONE, ctermbg=green ctermfg=blue guibg=green guifg=blue gui=bold
 
 set tags=~/*/tags
 hi Search ctermbg=LightBlue
