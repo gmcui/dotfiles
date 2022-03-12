@@ -37,6 +37,9 @@ defscrollback 10000
 # enable support for the "alternate screen" capability in all windows
 # altscreen on
 
+# https://wiki.archlinux.org/title/GNU_Screen#Use_256_colors
+term screen-256color
+
 ################
 #
 # xterm tweaks
